@@ -4,23 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title> {{ title }} - Rock Paper Scissors</title>
+    <title> {{ title }} - Player v Player</title>
 </head>
     <header>
         <ul>
-            <li clas="navLink"><a href="/">Home</a></li>
+            <li class="navLink"><a href="/">Home</a></li>
             <li class="navLink"><a href="/rock/scissors">Player v Player</a></li>
         </ul>
     </header>
 <body>
     <section>
         <div class="event-container">
-            {% for player in players %}
-            <div class="event">
-              <h2>{{ player.name }}</h2>
-              <h3>Plays: {{ player.choice }}</h3>
+              <h3><h3>
             </div>
-            {% endfor %}
     </section>
     
 </body>
