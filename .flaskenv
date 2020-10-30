@@ -1,0 +1,2 @@
+FLASK_APP=r_p_s_list.py
+FLASK_ENV=development
