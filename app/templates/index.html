@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title> {{ title }} - Rock Paper Scissors</title>
 </head>
+    <header>
+        <ul>
+            <li clas="navLink"><a href="/">Home</a></li>
+        </ul>
+    </header>
 <body>
+    <section>
+        <div class="event-container">
+            {% for player in players %}
+            <div class="event">
+              <h2>{{ player.name }}</h2>
+              <h3>Plays: {{ player.choice }}</h3>
+            </div>
+            {% endfor %}
+    </section>
     
 </body>
 </html>
