@@ -1,3 +1,33 @@
+@font-face {
+  font-family: "stereofidelic";
+  src: url(app/static/fonts/stereofidelic.ttf) format('truetype');
+}
+
+
+#websitename {
+  font-family: "stereofidelic";
+}
+
 body {
     background-color: #92BCEA;
+    font-family: 'Pangolin', cursive;
   }
+
+#rvs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: 'Pangolin', cursive;
+}
+
+#svp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#pvr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
