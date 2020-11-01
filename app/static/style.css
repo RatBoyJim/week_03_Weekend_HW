@@ -41,6 +41,24 @@ body {
   justify-content: center;
   }
 
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
+#rps-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+}
+
 #rules {
   text-align: center;
   flex-wrap: wrap;
@@ -76,6 +94,12 @@ body {
 }
 
 #play_button {
+  text-align: center;
+  font-size: 40px;
+  justify-content: center;
+}
+
+#winner {
   text-align: center;
   font-size: 40px;
   justify-content: center;

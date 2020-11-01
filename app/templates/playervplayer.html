@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title> {{ title }} - Player v Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title> {{ title }} - Player 2</title>
 </head>
-    <header>
+<header>
+    <h1 id="websitename">Rock Paper Scissors</h1>
+    <nav>
         <ul>
             <li class="navLink"><a href="/">Home</a></li>
-            <li class="navLink"><a href="/rock/scissors">Player vs Player</a></li>
+            <li class="navLink"><a href="/rock/scissors">Player v Player</a></li>
+            <li class="navLink"><a href="/player1">Player 1</a></li>
         </ul>
-    </header>
+    </nav>
+</header>
 <body>
     <section>
         <form class="form-inline" action="/rock/scissors" method="post">
