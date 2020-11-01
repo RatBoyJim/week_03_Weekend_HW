@@ -3,20 +3,50 @@
   src: url(app/static/fonts/stereofidelic.ttf) format('truetype');
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: cornsilk;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 
 #websitename {
-  font-family: "stereofidelic";
+  font-family: 'Roboto', sans-serif;
+  font-size: 75px;
+  margin-left: 10px;
+}
+
+header > nav > ul {
+  margin-top: 60px;
+}
+
+header > nav > ul > li {
+  font-family: 'Fredoka One', Arial, sans-serif;
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+}
+
+header > nav > ul > li > a {
+  text-decoration: none;
+  color: black;
 }
 
 body {
     background-color: #92BCEA;
     font-family: 'Pangolin', cursive;
+    margin: 0px;
+    align-items: center;
+    align-content: center;
   }
 
 #rvs {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: center;
   font-family: 'Pangolin', cursive;
 }
 
@@ -30,4 +60,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+footer {
+  font-family: 'Roboto', sans-serif;
+  background-color: cornsilk;
+  text-justify: auto;
+  display: flex;
+  justify-content: center;
 }

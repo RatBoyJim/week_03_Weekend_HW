@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title> {{ title }} - Rock Paper Scissors</title>
 </head>
-    <header id="websitename">
-        <h1>Rock Paper Scissors</h1>
-        <ul>
-            <li class="navLink"><a href="/">Home</a></li>
-            <li class="navLink"><a href="/rock/scissors">Player v Player</a></li>
-            <li class="navLink"><a href="/player1">Player 1</a></li>
-        </ul>
+    <header>
+        <h1 id="websitename">Rock Paper Scissors</h1>
+        <nav>
+            <ul>
+                <li class="navLink"><a href="/">Home</a></li>
+                <li class="navLink"><a href="/rock/scissors">Player v Player</a></li>
+                <li class="navLink"><a href="/player1">Player 1</a></li>
+            </ul>
+        </nav>
     </header>
 <body>
     <section>
@@ -44,6 +47,8 @@
         <img src="static/images/rock.png" alt="A picture of rock" style="width:50px;height:50px;">
         </p>
     </section>
-    
+    <footer>
+        <p>Anderson Web Enterprises 2020</p>
+    </footer>
 </body>
 </html>

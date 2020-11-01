@@ -19,9 +19,6 @@ def index():
 #     play_game = Game.play_game(player1, player2)
 #     return render_template('playervplayer.html', title='PvP', winner=play_game)
 
-@app.route('/results')
-def display_result():
-    return render_template('results.html', title='Results')
 
 @app.route('/player1')
 def player1_choice():
@@ -45,8 +42,14 @@ def result(choice1, choice2):
         choice_1 = 'Rock'
     elif choice1 == 'paper':
         choice_1 = 'Paper'
+    elif choice1 == 'scissors':
+        choice_1 = 'Scissors'
     if choice2 == 'scissors':
         choice_2 = 'Scissors'
+    elif choice2 == 'rock':
+        choice_2 = 'Rock'
+    elif choice2 == 'paper':
+        choice_2 = 'Paper'
     player1 = Player(name="Michael", choice=choice_1)
     player2 = Player(name="Marie", choice=choice_2)
     play_game = Game.play_game(player1, player2)
