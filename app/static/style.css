@@ -35,31 +35,50 @@ header > nav > ul > li > a {
 }
 
 body {
-    background-color: #92BCEA;
-    font-family: 'Pangolin', cursive;
-    margin: 0px;
-    align-items: center;
-    align-content: center;
+  background-color: #92BCEA;
+  font-family: 'Pangolin', cursive;
+  margin: 0px;
+  justify-content: center;
   }
+
+#rules {
+  text-align: center;
+  flex-wrap: wrap;
+  font-size: 30px;
+  flex-direction: column;
+}
 
 #rvs {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
-  font-family: 'Pangolin', cursive;
+  justify-content: center;
+  padding: 30px;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 #svp {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 30px;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 #pvr {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 30px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+#play_button {
+  text-align: center;
+  font-size: 40px;
+  justify-content: center;
 }
 
 footer {

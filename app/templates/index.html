@@ -20,7 +20,7 @@
         </nav>
     </header>
 <body>
-    <section>
+    <section id="rules">
         <h2>The Rules of Engagement</h2>
         <p>Each player enters their name and chooses either rock, paper or scissors</p>
         <br>
@@ -28,24 +28,28 @@
     </section>
     <section id="rvs">
         <p>
-        <img src="static/images/rock.png" alt="A picture of rock" style="width:50px;height:50px;">
+        <img src="static/images/rock.png" alt="A picture of rock" style="width:100px;height:100px;">
         SMASHES
-        <img src="static/images/scissors.png" alt="A picture of scissors" style="width:50px;height:50px;">
+        <img src="static/images/scissors.png" alt="A picture of scissors" style="width:100px;height:100px;">
         </p>
     </section>
     <section id="svp">
         <p>
-        <img src="static/images/scissors.png" alt="A picture of scissors" style="width:50px;height:50px;">
+        <img src="static/images/scissors.png" alt="A picture of scissors" style="width:100px;height:100px;">
         CUTS
-        <img src="static/images/paper.png" alt="A picture of paper" style="width:50px;height:50px;">
+        <img src="static/images/paper.png" alt="A picture of paper" style="width:100px;height:100px;">
         </p>
     </section>
     <section id="pvr">
         <p>
-        <img src="static/images/paper.png" alt="A picture of paper" style="width:50px;height:50px;">
+        <img src="static/images/paper.png" alt="A picture of paper" style="width:100px;height:100px;">
         COVERS
-        <img src="static/images/rock.png" alt="A picture of rock" style="width:50px;height:50px;">
+        <img src="static/images/rock.png" alt="A picture of rock" style="width:100px;height:100px;">
         </p>
+    </section>
+    <section id="play_button">
+        <p>Fancy a game?</p>
+        <p><a href="/player1"><img src="{{ url_for('static', filename='images/play.jpg') }}" alt="Play button" style="width:100px;height:100px;"></p>
     </section>
     <footer>
         <p>Anderson Web Enterprises 2020</p>
