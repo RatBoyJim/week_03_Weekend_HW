@@ -13,7 +13,7 @@ class Game():
         elif player_1.choice == "Paper" and player_2.choice == "Scissors":
             return f"{player_2.name} is the winner because {player_2.choice} cuts {player_1.choice}"
         elif player_1.choice == player_2.choice:
-            return None
+            return "It's a draw!"
 
 
 
