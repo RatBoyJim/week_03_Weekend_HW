@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title> {{ title }} - Player 1</title>
+</head>
+    <header>
+        <ul>
+            <li class="navLink"><a href="/">Home</a></li>
+            <li class="navLink"><a href="/rock/scissors">Player vs Player</a></li>
+        </ul>
+    </header>
+<body>
+    <section>
+        <!-- <form class="form-inline" action="/rock/scissors" method="post">
+            <label for="name1">Player 1's Name</label>
+            <input type="text" name="name1" id="name1"> </form> -->
+            <br>
+            <p>Choose a move for Player 1:</p>
+            <a href="/player1/rock"><img src="static/images/rock.png" alt="A picture of rock" style="width:50px;height:50px;"></a>
+            <a href="/player1/paper"><img src="static/images/paper.png" alt="A picture of paper" style="width:50px;height:50px;"></a>
+            <a href="/player1/scissors"><img src="static/images/scissors.png" alt="A picture of scissors" style="width:50px;height:50px;"></a>
+    </section> 
+</body>
+</html>
