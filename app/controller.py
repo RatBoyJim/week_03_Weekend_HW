@@ -8,7 +8,7 @@ from app.models.game import *
 def index():
     return render_template('index.html', title='RPS', players=players)
 
-@app.route('/pvp', methods=['GET', 'POST'])
+@app.route('/pvp', methods=['POST'])
 def player_v_player():
     name1 = request.form['name1']
     name2 = request.form['name2']
@@ -56,3 +56,17 @@ def result(choice1, choice2):
     play_game = Game.play_game(player1, player2)
     return render_template('results.html', title='RPS', winner=play_game)
 
+
+# @app.route('/player1/<choice1>/playcompy')
+# def play_compy(choice1):
+#     if choice1 == 'rock':
+#         choice_1 = 'Rock'
+#     elif choice1 == 'paper':
+#         choice_1 = 'Paper'
+#     elif choice1 == 'scissors':
+#         choice_1 = 'Scissors'
+#     Game.play_compy()
+#     player1 = Player("Player 1", choice=choice_1)
+#     player2 = Player("Compy", choice=compy.choice)
+#     play_game = Game.play_game(player1, player2)
+#     return render_template('results.html', title='RPS', winner=play_game)

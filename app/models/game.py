@@ -1,3 +1,5 @@
+import random
+
 class Game():
     def play_game(player_1, player_2):
         if player_1.choice == "Rock" and player_2.choice == "Scissors":
@@ -14,6 +16,12 @@ class Game():
             return f"{player_2.name} is the winner because {player_2.choice} cuts {player_1.choice}"
         elif player_1.choice == player_2.choice:
             return "It's a draw!"
+
+    def play_compy():
+        all_moves = ["Rock", "Paper", "Scissors"]
+        compy_choice = random.choice(all_moves)
+        compy = Player("Compy", compy_choice)
+        return compy
 
 
 
