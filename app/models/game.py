@@ -1,5 +1,7 @@
 import random
 
+from app.models.player import Player
+
 class Game():
     def play_game(player_1, player_2):
         if player_1.choice == "Rock" and player_2.choice == "Scissors":
@@ -16,6 +18,19 @@ class Game():
             return f"{player_2.name} is the winner because {player_2.choice} cuts {player_1.choice}"
         elif player_1.choice == player_2.choice:
             return "It's a draw!"
+
+    def play_game_2(player_1, player_2):
+        if player_1.choice == player_2.choice:
+            return None
+        elif player_1.choice == "Rock" and player_2.choice == "Scissors":
+            return player_1
+        elif player_1.choice == "Scissors" and player_2.choice == "Paper":
+            return player_1
+        elif player_1.choice == "Paper" and player_2.choice == "Rock":
+            return player_1
+        else:
+            return player_2
+        
 
     def play_compy():
         all_moves = ["Rock", "Paper", "Scissors"]

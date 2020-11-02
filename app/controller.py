@@ -20,6 +20,9 @@ def player_v_player():
     play_game = Game.play_game(player1, player2)
     return render_template('playervplayer.html', players=players, title='PvP', winner=play_game)
 
+@app.route('/playvcompy')
+def playvcompy():
+    return render_template('playvcompy.html', title='RPS')
 
 @app.route('/player1')
 def player1_choice():
@@ -57,16 +60,16 @@ def result(choice1, choice2):
     return render_template('results.html', title='RPS', winner=play_game)
 
 
-# @app.route('/player1/<choice1>/playcompy')
-# def play_compy(choice1):
-#     if choice1 == 'rock':
-#         choice_1 = 'Rock'
-#     elif choice1 == 'paper':
-#         choice_1 = 'Paper'
-#     elif choice1 == 'scissors':
-#         choice_1 = 'Scissors'
-#     Game.play_compy()
-#     player1 = Player("Player 1", choice=choice_1)
-#     player2 = Player("Compy", choice=compy.choice)
-#     play_game = Game.play_game(player1, player2)
-#     return render_template('results.html', title='RPS', winner=play_game)
+@app.route('/player1/<choice1>/compy')
+def play_compy(choice1):
+    if choice1 == 'rock':
+        choice_1 = 'Rock'
+    elif choice1 == 'paper':
+        choice_1 = 'Paper'
+    elif choice1 == 'scissors':
+        choice_1 = 'Scissors'
+    compy = Game.play_compy()
+    player1 = Player("Player 1", choice=choice_1)
+    player2 = compy
+    play_game = Game.play_game_2(player1, player2)
+    return render_template('compy_results.html', title='RPS', winner=play_game, player1=player1, player2=player2)

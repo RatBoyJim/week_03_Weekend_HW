@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <title> {{ title }} - Player 2</title>
+    <title> {{ title }} - Player 1</title>
 </head>
 <header>
     <h1 id="websitename">Rock Paper Scissors</h1>
@@ -22,15 +22,15 @@
 </header>
 <body>
     <section class="section-content">
-        <!-- <form class="form-inline" action="/rock/scissors" method="post">
-            <label for="name2">Player 2's Name</label>
-            <input type="text" name="name1" id="name1"></form> -->
+        <!-- <form class="form-inline" action="/player1" method="post">
+            <label for="name1">Player 1's Name</label>
+            <input type="text" name="name1" id="name1"> </form> -->
             <br>
-            <p>Choose a move for Player 2:</p>
+            <p>Choose a move for Player 1:</p>
             <article>
-            <a href="/player1/rock/rock"><img src="{{ url_for('static', filename='images/Rock.png') }}" alt="Rock" style="width:200px;height:200px;"></a>
-            <a href="/player1/rock/paper"><img src="{{ url_for('static', filename='images/Paper.png') }}" alt="Paper" style="width:200px;height:200px;"></a>
-            <a href="/player1/rock/scissors"><img src="{{ url_for('static', filename='images/Scissors.png') }}" alt="Scissors" style="width:200px;height:200px;"></a>
+            <a href="/player1/rock/compy"><img src="static/images/rock.png" alt="A picture of rock" style="width:200px;height:200px;"></a>
+            <a href="/player1/paper/compy"><img src="static/images/paper.png" alt="A picture of paper" style="width:200px;height:200px;"></a>
+            <a href="/player1/scissors/compy"><img src="static/images/scissors.png" alt="A picture of scissors" style="width:200px;height:200px;"></a>
             </article>
     </section> 
 </body>
