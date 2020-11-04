@@ -8,17 +8,21 @@ from app.models.game import *
 def index():
     return render_template('index.html', title='RPS', players=players)
 
-@app.route('/pvp', methods=['POST'])
+@app.route("/pvp/new", methods=["GET"])
+def new_game():
+    return render_template('playervplayer.html')
+
+@app.route('/pvp', methods = ["POST"])
 def player_v_player():
     name1 = request.form['name1']
     name2 = request.form['name2']
     choice1 = request.form['choice1']
     choice2 = request.form['choice2']
-    player1 = Player(name=name1, choice=choice1)
-    player2 = Player(name=name2, choice=choice2)
+    player1 = Player('name1', 'choice1')
+    player2 = Player('name2', 'choice2')
     players = [player1, player2]
     play_game = Game.play_game(player1, player2)
-    return render_template('playervplayer.html', players=players, title='PvP', winner=play_game)
+    return render_template('pvpresult.html', players=players, title='PvP', winner=play_game)
 
 @app.route('/playvcompy')
 def playvcompy():
