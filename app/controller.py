@@ -18,11 +18,10 @@ def player_v_player():
     name2 = request.form['name2']
     choice1 = request.form['choice1']
     choice2 = request.form['choice2']
-    player1 = Player('name1', 'choice1')
-    player2 = Player('name2', 'choice2')
-    players = [player1, player2]
-    play_game = Game.play_game(player1, player2)
-    return render_template('pvpresult.html', players=players, title='PvP', winner=play_game)
+    player1 = Player(name1, choice1)
+    player2 = Player(name2, choice2)
+    play_game = Game.play_game_2(player1, player2)
+    return render_template('pvpresult.html', player1 = player1, player2 = player2, title='PvP', winner=play_game)
 
 @app.route('/playvcompy')
 def playvcompy():
