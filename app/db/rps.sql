@@ -2,6 +2,9 @@ DROP TABLE players;
 
 CREATE TABLE players (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
+    name VARCHAR(255),
+    won INT,
+    drawn INT,
+    lost INT
 );
 

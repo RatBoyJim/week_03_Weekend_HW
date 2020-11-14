@@ -3,8 +3,8 @@ from app.db.run_sql import run_sql
 from app.models.player import Player
 
 def save(player):
-    sql = "INSERT INTO players (name) VALUES (%s) RETURNING *"
-    values = [player.name]
+    sql = "INSERT INTO players (name, won, drawn, lost) VALUES (%s, %s, %s, %s) RETURNING *"
+    values = [player.name, player.won, player.drawn, player.lost]
     results = run_sql(sql, values)
     id = results[0]['id']
     player.id = id
@@ -17,7 +17,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        player = Player(row['name'], row['id'])
+        player = Player(row['name'], row['won'], row['drawn'], row['lost'], row['id'])
         players.append(player)
     return players
 

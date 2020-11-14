@@ -3,6 +3,7 @@ from app import app
 from app.models.players import *
 from app.models.player import *
 from app.models.game import *
+import app.repositories.player_repository as player_repository
 
 @app.route('/')
 def index():
@@ -10,7 +11,8 @@ def index():
 
 @app.route("/pvp/new", methods=["GET"])
 def new_game():
-    return render_template('playervplayer.html')
+    players = player_repository.select_all()
+    return render_template('playervplayer.html', players = players)
 
 @app.route('/pvp', methods = ["POST"])
 def player_v_player():
@@ -29,7 +31,8 @@ def playvcompy():
 
 @app.route('/player1')
 def player1_choice():
-    return render_template('player1.html', title='RPS')
+    players = player_repository.select_all()
+    return render_template('player1.html', title='RPS', players = players)
 
 @app.route('/player1/rock')
 def player2_choice_p1r():

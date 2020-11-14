@@ -21,6 +21,8 @@ class Game():
 
     def play_game_2(player_1, player_2):
         if player_1.choice == player_2.choice:
+            player_1.drawn += 1
+            player_2.drawn += 1
             return None
         elif player_1.choice == "Rock" and player_2.choice == "Scissors":
             return player_1

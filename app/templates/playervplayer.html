@@ -24,7 +24,12 @@
     <section>
         <form class="form-inline" action="/pvp" method="post">
             <label for="name1">Player 1's Name</label>
-            <input type="text" name="name1" id="name1">
+            <select id="name1" name="name1">
+                <option value="holder" disabled required>Choose Option</option>
+                {% for player in players %}
+                    <option value="{{player.name}}">{{ player.name }}</option>
+                {% endfor %}
+            </select>
             <br>
             <label for="choice1">Choose a move for Player 1:</label>
             <select id="choice1" name="choice1">
@@ -36,7 +41,12 @@
             <br>
             <br>
             <label for="name2">Player 2's Name</label>
-            <input type="text" name="name2" id="name2">
+            <select id="name2" name="name2">
+                <option value="holder" disabled required>Choose Option</option>
+                {% for player in players %}
+                    <option value="{{player.name}}">{{ player.name }}</option>
+                {% endfor %}
+            </select>
             <br>
             <label for="choice2">Choose a move for Player 2:</label>
             <select id="choice2" name="choice2">
