@@ -25,8 +25,13 @@ def player_v_player():
     player1 = Player(player_1.name, choice1, player_1.won, player_1.drawn, player_1.lost, player_1.id)
     player2 = Player(player_2.name, choice2, player_2.won, player_2.drawn, player_2.lost, player_2.id)
     play_game = Game.play_game_2(player1, player2)
-    player_repository.update(play_game)
-    return render_template('pvpresult.html', player1 = player1, player2 = player2, title='PvP', winner=play_game)
+    if len(play_game) == 3:
+        player_repository.update(play_game[1])
+        player_repository.update(play_game[2])
+    else:
+        player_repository.update(play_game[0])
+        player_repository.update(play_game[1])
+    return render_template('pvpresult.html', player1 = player1, player2 = player2, title='PvP', winner=play_game[0])
 
 @app.route('/playvcompy')
 def playvcompy():
