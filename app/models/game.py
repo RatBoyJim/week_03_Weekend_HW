@@ -19,19 +19,21 @@ class Game():
         elif player_1.choice == player_2.choice:
             return "It's a draw!"
 
-    def play_game_2(player_1, player_2):
-        if player_1.choice == player_2.choice:
-            player_1.drawn += 1
-            player_2.drawn += 1
+    def play_game_2(player1, player2):
+        if player1.choice == player2.choice:
             return None
-        elif player_1.choice == "Rock" and player_2.choice == "Scissors":
-            return player_1
-        elif player_1.choice == "Scissors" and player_2.choice == "Paper":
-            return player_1
-        elif player_1.choice == "Paper" and player_2.choice == "Rock":
-            return player_1
+        elif player1.choice == "Rock" and player2.choice == "Scissors":
+            player1.won += 1
+            return player1
+        elif player1.choice == "Scissors" and player2.choice == "Paper":
+            player1.won += 1
+            return player1
+        elif player1.choice == "Paper" and player2.choice == "Rock":
+            player1.won += 1
+            return player1
         else:
-            return player_2
+            player2.won += 1
+            return player2
         
 
     def play_compy():

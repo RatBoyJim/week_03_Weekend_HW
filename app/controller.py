@@ -20,9 +20,12 @@ def player_v_player():
     name2 = request.form['name2']
     choice1 = request.form['choice1']
     choice2 = request.form['choice2']
-    player1 = Player(name1, choice1)
-    player2 = Player(name2, choice2)
+    player_1 = player_repository.select_player_by_name(name1)
+    player_2 = player_repository.select_player_by_name(name2)
+    player1 = Player(player_1.name, choice1, player_1.won, player_1.drawn, player_1.lost, player_1.id)
+    player2 = Player(player_2.name, choice2, player_2.won, player_2.drawn, player_2.lost, player_2.id)
     play_game = Game.play_game_2(player1, player2)
+    player_repository.update(play_game)
     return render_template('pvpresult.html', player1 = player1, player2 = player2, title='PvP', winner=play_game)
 
 @app.route('/playvcompy')
