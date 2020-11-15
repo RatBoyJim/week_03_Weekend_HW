@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <title> {{ title }} - Player 2</title>
+    <title> {{ title }} Results </title>
 </head>
 <header>
     <h1 id="websitename">Rock Paper Scissors</h1>
@@ -16,22 +16,30 @@
             <li class="navLink"><a href="/">Home</a></li>
             <li class="navLink"><a href="/player1">Play Human</a></li>
             <li class="navLink"><a href="/playvcompy">Play Compy</a></li>
-            <li class="navLink"><a id="ah" href="/pvp/new">Player v Player</a></li>
+            <li class="navLink"><a id="ah" href="/pvp">Player v Player</a></li>
         </ul>
     </nav>
 </header>
 <body>
-    <section class="section-content">
-        <!-- <form class="form-inline" action="/rock/scissors" method="post">
+    <section>
+        <form class="form-inline" action="/pvp" method="post">
             <label for="name2">Player 2's Name</label>
-            <input type="text" name="name1" id="name1"></form> -->
+            <select id="name2" name="name2">
+                <option value="holder" disabled required>Choose Option</option>
+                {% for player in players %}
+                    <option value="{{player.name}}">{{ player.name }}</option>
+                {% endfor %}
+            </select>
             <br>
-            <p>Choose a move for Player 2:</p>
-            <article>
-            <a href="/player1/rock/rock"><img src="{{ url_for('static', filename='images/Rock.png') }}" alt="Rock" style="width:200px;height:200px;"></a>
-            <a href="/player1/rock/paper"><img src="{{ url_for('static', filename='images/Paper.png') }}" alt="Paper" style="width:200px;height:200px;"></a>
-            <a href="/player1/rock/scissors"><img src="{{ url_for('static', filename='images/Scissors.png') }}" alt="Scissors" style="width:200px;height:200px;"></a>
-            </article>
+            <label for="choice2">Choose a move for Player 2:</label>
+            <select id="choice2" name="choice2">
+            <option value="Rock">Rock</option>
+            <option value="Paper">Paper</option>
+            <option value="Scissors">Scissors</option>
+            </select>
+            <br>
+            <input type="submit" value="Let's Play!">
+        </form>
     </section> 
 </body>
 <footer>

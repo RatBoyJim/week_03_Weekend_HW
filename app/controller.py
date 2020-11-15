@@ -14,6 +14,11 @@ def new_game():
     players = player_repository.select_all()
     return render_template('playervplayer.html', players = players)
 
+# @app.route("/pvp2", methods=["POST"])
+# def p2():
+#     players = player_repository.select_all()
+#     return render_template('pvp2.html', players = players)
+
 @app.route('/pvp', methods = ["POST"])
 def player_v_player():
     name1 = request.form['name1']
@@ -84,7 +89,7 @@ def play_compy(choice1):
     elif choice1 == 'scissors':
         choice_1 = 'Scissors'
     compy = Game.play_compy()
-    player1 = Player("Player 1", choice=choice_1)
+    player1 = Player("Player 1", choice_1, 0, 0, 0)
     player2 = compy
     play_game = Game.play_game_2(player1, player2)
-    return render_template('compy_results.html', title='RPS', winner=play_game, player1=player1, player2=player2)
+    return render_template('compy_results.html', title='RPS', winner=play_game[0], player1=player1, player2=player2)

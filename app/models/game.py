@@ -45,7 +45,7 @@ class Game():
     def play_compy():
         all_moves = ["Rock", "Paper", "Scissors"]
         compy_choice = random.choice(all_moves)
-        compy = Player("Compy", compy_choice)
+        compy = Player("Compy", compy_choice, 0, 0, 0)
         return compy
 
 

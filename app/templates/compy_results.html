@@ -16,7 +16,7 @@
             <li class="navLink"><a href="/">Home</a></li>
             <li class="navLink"><a href="/player1">Play Human</a></li>
             <li class="navLink"><a href="/playvcompy">Play Compy</a></li>
-            <li class="navLink"><a id="ah" href="/pvp">Player v Player</a></li>
+            <li class="navLink"><a id="ah" href="/pvp/new">Player v Player</a></li>
         </ul>
     </nav>
 </header>
@@ -27,7 +27,7 @@
         <p>{{player1.name}} played: {{player1.choice}}</p>
         <p>{{player2.name}} played: {{player2.choice}}</p>
 
-        {% if winner != None %}
+        {% if winner != "Draw" %}
         <p>{{winner.name}} wins with {{winner.choice}}</p>
         {% else %}
         <p>It's a draw!</p>
