@@ -13,7 +13,7 @@ def save(player):
 def select_all():
     players = []
 
-    sql = "SELECT * FROM players"
+    sql = "SELECT * FROM players ORDER BY won DESC"
     results = run_sql(sql)
 
     for row in results:

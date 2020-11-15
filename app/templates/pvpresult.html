@@ -33,6 +33,11 @@
         <p>It's a draw!</p>
         {% endif %}
         <p><a href="/pvp/new"><img src="{{ url_for('static', filename='images/playagain.png') }}" alt="Play Again" style="width:300px;height:250px;"></a></p>
+        <br>
+        <br>
+        {% for score in scores %}
+            <p>{{score.name}} has {{score.won}} wins, {{score.lost}} losses and {{score.drawn}} draws</p>   
+        {% endfor %}
     </section>
 </body>
 <footer>

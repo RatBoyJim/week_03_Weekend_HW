@@ -31,7 +31,8 @@ def player_v_player():
     else:
         player_repository.update(play_game[0])
         player_repository.update(play_game[1])
-    return render_template('pvpresult.html', player1 = player1, player2 = player2, title='PvP', winner=play_game[0])
+    scores = player_repository.select_all()
+    return render_template('pvpresult.html', player1 = player1, player2 = player2, title='PvP', winner=play_game[0], scores = scores)
 
 @app.route('/playvcompy')
 def playvcompy():
